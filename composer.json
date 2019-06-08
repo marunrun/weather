@@ -1,0 +1,21 @@
+{
+    "name": "marun\/weather",
+    "description": "A weather SDK",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "marun",
+            "email": "run@runrun520.cn"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^8.2",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marun\\Weather\\": "src"
+        }
+    }
+}
