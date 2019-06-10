@@ -4,7 +4,7 @@ namespace Run6\Weather;
 
 
 use GuzzleHttp\Client;
-use Run6\Weather\Exception\{HttpException,InvalidArgumentException};
+use Run6\Weather\Exception\{HttpException, InvalidArgumentException};
 
 class Weather
 {
@@ -23,8 +23,8 @@ class Weather
      * @param string $type
      * @param string $format
      * @return false|string
-     * @throws InvalidArgumentException
      * @throws HttpException
+     * @throws InvalidArgumentException
      */
     public function getWeather($city, string $type = 'base', string $format = 'json')
     {
@@ -35,7 +35,7 @@ class Weather
             throw new InvalidArgumentException('Invalid response format: ' . $format);
         }
 
-        if (!in_array(strtolower($type), ['base', 'all'])) {
+        if (!in_array(strtolower($type),['base','all'])) {
             throw new InvalidArgumentException('Invalid type value(base/all): ' . $type);
         }
 
@@ -62,6 +62,32 @@ class Weather
             // 并将调用异常作为 $previousException 传入。
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
+    }
+
+    /**
+     * 获取实时天气信息
+     * @param $city
+     * @param string $format
+     * @return false|string
+     * @throws HttpException
+     * @throws InvalidArgumentException
+     */
+    public function getLiveWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'base', $format);
+    }
+
+    /**
+     * 获取天气预报
+     * @param $city
+     * @param string $format
+     * @return false|string
+     * @throws HttpException
+     * @throws InvalidArgumentException
+     */
+    public function getForecastsWeather($city, $format = 'json')
+    {
+        return $this->getWeather($city, 'all', $format);
     }
 
     /**
