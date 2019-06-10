@@ -1,10 +1,10 @@
 {
-    "name": "marun\/weather",
+    "name": "Run6\/weather",
     "description": "A weather SDK",
     "license": "MIT",
     "authors": [
         {
-            "name": "marun",
+            "name": "Run6",
             "email": "run@runrun520.cn"
         }
     ],
@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Marun\\Weather\\": "src"
+            "Run6\\Weather\\": "src"
         }
     }
 }

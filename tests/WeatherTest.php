@@ -1,14 +1,14 @@
 <?php
 
-namespace Marun\Weather\Tests;
+namespace Run6\Weather\Tests;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
-use Marun\Weather\Exception\HttpException;
-use Marun\Weather\Exception\InvalidArgumentException;
-use Marun\Weather\Weather;
+use Run6\Weather\Exception\HttpException;
+use Run6\Weather\Exception\InvalidArgumentException;
+use Run6\Weather\Weather;
 use Mockery\Matcher\AnyArgs;
 use PHPUnit\Framework\TestCase;
 

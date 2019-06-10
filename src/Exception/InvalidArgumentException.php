@@ -1,6 +1,6 @@
 <?php
 
-namespace Marun\Weather\Exception;
+namespace Run6\Weather\Exception;
 
 
 class InvalidArgumentException extends Exception

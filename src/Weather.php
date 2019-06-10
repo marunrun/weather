@@ -1,10 +1,10 @@
 <?php
 
-namespace Marun\Weather;
+namespace Run6\Weather;
 
 
 use GuzzleHttp\Client;
-use Marun\Weather\Exception\{HttpException,InvalidArgumentException};
+use Run6\Weather\Exception\{HttpException,InvalidArgumentException};
 
 class Weather
 {
