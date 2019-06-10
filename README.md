@@ -3,6 +3,7 @@
 <p align="center"> A weather SDK.</p>
 
 [![Build Status](https://travis-ci.org/run6/weather.svg?branch=master)](https://travis-ci.org/run6/weather)
+![StyleCI build status](https://github.styleci.io/repos/190883554/shield) 
 
 ## Installing
 
@@ -130,7 +131,7 @@ $response = $weather->getWeather('杭州','all')
  ```php
  $response = $weather('杭州','base','xml')
  ```
- 
+
 ### 返回实例
 
 ```xml
