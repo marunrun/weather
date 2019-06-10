@@ -2,7 +2,6 @@
 
 namespace Run6\Weather\Tests;
 
-
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
