@@ -1,10 +1,10 @@
 {
-    "name": "Run6\/weather",
+    "name": "run6\/weather",
     "description": "A weather SDK",
     "license": "MIT",
     "authors": [
         {
-            "name": "Run6",
+            "name": "marun",
             "email": "run@runrun520.cn"
         }
     ],
