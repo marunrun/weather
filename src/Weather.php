@@ -4,7 +4,8 @@ namespace Run6\Weather;
 
 
 use GuzzleHttp\Client;
-use Run6\Weather\Exception\{HttpException, InvalidArgumentException};
+use Run6\Weather\Exception\HttpException;
+use Run6\Weather\Exception\InvalidArgumentException;
 
 class Weather
 {
@@ -12,7 +13,7 @@ class Weather
     protected $key; // APIkey
     protected $guzzleOptions = []; // guzzle的配置
 
-    public function __construct(string $key)
+    public function __construct($key)
     {
         $this->key = $key;
     }
@@ -26,7 +27,7 @@ class Weather
      * @throws HttpException
      * @throws InvalidArgumentException
      */
-    public function getWeather($city, string $type = 'base', string $format = 'json')
+    public function getWeather($city, $type = 'base', $format = 'json')
     {
         $url = 'https://restapi.amap.com/v3/weather/weatherInfo'; // 接口url地址
 
@@ -102,7 +103,7 @@ class Weather
     /**
      * @param array $guzzleOptions
      */
-    function setGuzzleOptions(array $guzzleOptions): void
+    function setGuzzleOptions(array $guzzleOptions)
     {
         $this->guzzleOptions = $guzzleOptions;
     }
