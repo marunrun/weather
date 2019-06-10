@@ -2,15 +2,14 @@
 
 namespace Run6\Weather;
 
-
 use GuzzleHttp\Client;
 use Run6\Weather\Exception\HttpException;
 use Run6\Weather\Exception\InvalidArgumentException;
 
 class Weather
 {
-
     protected $key; // APIkey
+
     protected $guzzleOptions = []; // guzzle的配置
 
     public function __construct($key)
@@ -18,12 +17,13 @@ class Weather
         $this->key = $key;
     }
 
-
     /**
      * @param $city
      * @param string $type
      * @param string $format
+     *
      * @return false|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -33,11 +33,11 @@ class Weather
 
         // 1.对 `$format` 和 `$type` 参数进行检查，不在范围内的抛出异常
         if (!in_array(strtolower($format), ['xml', 'json'])) {
-            throw new InvalidArgumentException('Invalid response format: ' . $format);
+            throw new InvalidArgumentException('Invalid response format: '.$format);
         }
 
-        if (!in_array(strtolower($type),['base','all'])) {
-            throw new InvalidArgumentException('Invalid type value(base/all): ' . $type);
+        if (!in_array(strtolower($type), ['base', 'all'])) {
+            throw new InvalidArgumentException('Invalid type value(base/all): '.$type);
         }
 
         // 2.构建查询参数，对空值过滤
@@ -45,7 +45,7 @@ class Weather
             'key' => $this->key,
             'city' => $city,
             'output' => strtolower($format),
-            'extensions' => strtolower($type)
+            'extensions' => strtolower($type),
         ]);
 
         try {
@@ -66,10 +66,13 @@ class Weather
     }
 
     /**
-     * 获取实时天气信息
+     * 获取实时天气信息.
+     *
      * @param $city
      * @param string $format
+     *
      * @return false|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -79,10 +82,13 @@ class Weather
     }
 
     /**
-     * 获取天气预报
+     * 获取天气预报.
+     *
      * @param $city
      * @param string $format
+     *
      * @return false|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -92,10 +98,11 @@ class Weather
     }
 
     /**
-     * 返回guzzle的HTTP实例
+     * 返回guzzle的HTTP实例.
+     *
      * @return Client
      */
-    function getHttpClient()
+    public function getHttpClient()
     {
         return new Client($this->guzzleOptions);
     }
@@ -103,7 +110,7 @@ class Weather
     /**
      * @param array $guzzleOptions
      */
-    function setGuzzleOptions(array $guzzleOptions)
+    public function setGuzzleOptions(array $guzzleOptions)
     {
         $this->guzzleOptions = $guzzleOptions;
     }
