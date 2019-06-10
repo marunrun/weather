@@ -4,8 +4,7 @@
 
 [![Build Status](https://travis-ci.org/run6/weather.svg?branch=master)](https://travis-ci.org/run6/weather)
 ![StyleCI build status](https://github.styleci.io/repos/190883554/shield) 
-
-## Installing
+![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/run6/weather.svg?label=scrutinizer)## Installing
 
 ```shell
 $ composer require run6/weather -vvv
