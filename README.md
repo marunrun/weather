@@ -198,7 +198,7 @@ WEATHER_API_KEY=xxxxxxxxx
     .
     .
     .
-    pubcli function GetWeather()
+    pubcli function getWeather()
     {
         $response = app('weather')->getWeather('杭州');
     }
