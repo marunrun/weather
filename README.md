@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/run6/weather.svg?branch=master)](https://travis-ci.org/run6/weather)
 ![StyleCI build status](https://github.styleci.io/repos/190883554/shield) 
-![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/run6/weather.svg?label=scrutinizer)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/run6/weather/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/run6/weather/?branch=master)
 
 ## Installing
 
