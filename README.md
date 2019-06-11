@@ -3,7 +3,7 @@
 <p align="center"> A weather SDK.</p>
 
 [![Build Status](https://travis-ci.org/run6/weather.svg?branch=master)](https://travis-ci.org/run6/weather)
-![StyleCI build status](https://github.styleci.io/repos/190883554/shield) 
+[![StyleCI](https://github.styleci.io/repos/190883554/shield?branch=master)](https://github.styleci.io/repos/190883554)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/run6/weather/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/run6/weather/?branch=master)
 
 ## Installing
